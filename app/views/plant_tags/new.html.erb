@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>You're adding a tag to <%= @plant.name %></h1>
+
+  <%= simple_form_for([@plant, @plant_tag]) do |f| %>
+
+    <%#= f.association :tag %>
+    <%= f.input :tag_id, collection: Tag.all, label: "hi there" %>
+
+    <%= f.submit :hello, class: "btn btn-success" %>
+  <% end %>
+
+</div>
